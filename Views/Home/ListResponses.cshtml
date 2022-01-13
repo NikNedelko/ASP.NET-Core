@@ -7,10 +7,13 @@
 
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" /><!--Добавление классов Bootstrap в файл-->
     <title>Responses</title>
 </head>
 <body>
+    <div class="panel-body"></div><!--Добавление классов Bootstrap в файл-->
     <h2>Here is the list of people attending the party</h2>
+    <table class="table table-sm table-striped table-bordered"></table><!--Добавление классов Bootstrap в файл-->
     <table>
         <thead>
             <tr>
@@ -20,13 +23,14 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (PartyInvites.Models.GuestResponse r in Model) {
-            <tr>
-                <td>@r.Name</td>
-                <td>@r.Email</td>
-                <td>@r.Phone</td>
-            </tr>
-            } 
+            @foreach (PartyInvites.Models.GuestResponse r in Model)
+            {
+                <tr>
+                    <td>@r.Name</td>
+                    <td>@r.Email</td>
+                    <td>@r.Phone</td>
+                </tr>
+            }
         </tbody>
     </table>
 </body>
