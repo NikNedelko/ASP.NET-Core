@@ -22,6 +22,5 @@ namespace PartyInvites.Models
         [Required(ErrorMessage = "Please specify whether you'll attend")]
         // Пожалуйста, укажите, примете ли участие 
         public bool? WillAttend { get; set; }
-
     }
 }
